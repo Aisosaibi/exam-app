@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE Fundamentals Exam</title>
+  <meta name="description" content="A closed-book, self-graded software engineering fundamentals exam that runs entirely in your browser.">
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+  <div id="app" tabindex="-1">
+    <noscript><p class="boot">This exam needs JavaScript. There is no server and nothing is sent anywhere.</p></noscript>
+    <p class="boot" id="boot">loading exam data…</p>
+  </div>
+
+  <dialog id="dlg" aria-labelledby="dlg-title">
+    <form method="dialog" id="dlg-form">
+      <h2 id="dlg-title"></h2>
+      <div id="dlg-body"></div>
+      <div class="dlg-actions">
+        <button value="cancel" class="btn ghost" id="dlg-cancel">Cancel</button>
+        <button value="ok" class="btn primary" id="dlg-ok">OK</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- questions.js is generated from the exam Markdown by tools/parse_exam.py.
+       It is a script (not fetch()ed JSON) so the page also works from file://. -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
